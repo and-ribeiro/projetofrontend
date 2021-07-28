@@ -1,0 +1,238 @@
+/* ATENÇÃO
+   ATENÇÃO
+   ATENÇÃO
+   
+   Os comentários pertinentes vem ANTES da alteração respectiva,
+   nessa ordem-> Comentario, em seguida código
+*/
+
+
+
+/* Defini um tamanho padrão pro Logo, só pra não ficar aquela imagem
+   gigante atrapalhando a nossa visualização */
+
+
+.logo {
+    width: 175px;
+    height: 100px;
+    margin: 0,5em;
+    padding: 0,5em;
+}
+
+* {
+    font-family: 'Abel', sans-serif;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+a:visited, a:active, a:focus, a:link {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    text-decoration: none;
+    color:darkturquoise;
+    font-size: 25px;
+    padding: 0;
+    transition: 200ms ease-in-out;
+}
+
+
+.menu:hover {
+    background-color: transparent;
+    color: hsl(0, 0%, 95%);
+}
+
+/* Parallax*/
+.wrapper {
+    
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 100px;
+    height: 100vh;
+    width: 100vh;
+}
+
+.banner {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 25px #000;
+}
+
+h1{
+    font-size: 100px;
+    font-weight: bold;
+}
+
+.apre{
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 0 0 25px #000;
+}
+
+.parallax::after {
+    content: " ";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateZ(-50px) scale(1.5);
+    background-size: 100%;
+    z-index: -1;
+}
+
+.bg::after {
+    background-image: url("https://veja.abril.com.br/wp-content/uploads/2020/05/2020-05-22t104118z_975562266_rc2mtg9ytuth_rtrmadp_3_health-coronavirus-astrazeneca-oxford.jpg");
+} 
+/* Fim do Parallax */
+
+
+header {
+    margin: 0;
+    padding: 1em;
+    background-color: lightblue;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Troquei a div por nav, nomeei os itens do header como menu, mas pode ser qualquer coisa,
+   era só pra puxar aqui no CSS */
+.menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li {
+    margin: 20px;
+}
+
+.banner button{
+    background-color: white;
+    border: 2px solid rgba(255, 255, 255, 0.767);
+    margin: 2em;
+    padding: 1em 2em;
+    font-size: 1em;
+    border-radius: 3em;
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+}
+
+.banner button:hover {
+    background-color: lightskyblue;
+    color: white;
+}
+
+/* tirei o sublinhado dos links, acho feio, kkkkk, mas podemos acordar em outra
+   solução caso prefiram... */
+a {
+    text-decoration: none;
+}
+
+.capa_vacinas {
+    max-width: 100%;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* aqui controlamos nossa div principal, fiz algumas formatações
+   apenas para facilitar a vizualização de mudanças, mas também nada fixo! */
+.vacinas {
+    border-radius: 10px;
+    background-color: lightcyan;
+    margin: 20%;
+    text-align: left;
+    display: grid;
+    max-width: 1440px;
+    grid-template-columns: auto;
+}
+.vacinas_foto_1 {
+    float: left;
+    margin: 2em;
+    max-width: 30%;
+    max-height: 30%;
+    width: auto;
+    height: auto;
+}
+
+.vacinas_foto_2 {
+    float: right;
+    margin: 2em;
+    max-width: 30%;
+    max-height: 30%;
+    width: auto;
+    height: auto;
+}
+
+.text{
+    padding: 10px;
+}
+
+
+
+img{
+    border-radius: 5px;
+}
+
+/*Efeito Hover das Vacinas*/
+.vacinas button {
+    background-color: white;
+    border: 2px solid rgba(255, 255, 255, 0.767);
+    padding: 1em 2em;
+    font-size: 1em;
+    border-radius: 3em;
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+}
+
+.vacina_button_1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.vacina_button_2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.vacina_nome button:hover {
+    background-color: lightskyblue;
+    color: white;
+}
+
+
+/*Final efeito Hover das Vacinas*/
+
+/* aqui a gente ta controlando o tamanho das imagens de forma bem bruta,
+   se acharem um solução melhor, FERRO NA BONECA! */
+.vacinas_foto {
+    margin: 2em;
+    max-width: 25%;
+    max-height: 25%;
+    
+}
+
+
+/* adicionei essas linhas para controlar o espaçamento dos nossos items em relação a borda */
+h2, p, button {
+    margin: 1em 2em;
+    /* display: inline-block; */
+}
